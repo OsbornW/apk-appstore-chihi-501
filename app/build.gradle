@@ -1,0 +1,103 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.tea.store'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.tea.store"
+        minSdk 22
+        targetSdk 33
+        versionCode 1
+        versionName "1.1"
+        // 设置自定义属性
+        manifestPlaceholders = [
+                user_id   : "62",
+                appId     : "appstore",
+                channel   : "AS25001",
+                chihi_type: "AppStore",
+                model     : "AS25001"
+        ]
+
+        // 构建自定义配置字段
+        buildConfigField "String", "USER_ID", "\"${manifestPlaceholders.user_id}\""
+        buildConfigField "String", "APP_ID", "\"${manifestPlaceholders.appId}\""
+        buildConfigField "String", "CHANNEL", "\"${manifestPlaceholders.channel}\""
+        buildConfigField "String", "CHIHI_TYPE", "\"${manifestPlaceholders.chihi_type}\""
+        buildConfigField "String", "MODEL", "\"${manifestPlaceholders.model}\""
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        //打包应用
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "AppStore_${defaultConfig.versionName}_${getTime()}_${defaultConfig.manifestPlaceholders.channel}.apk"
+            }
+        }
+    }
+
+    signingConfigs {
+        debug{
+                storeFile file("platform_chihi.jks")
+                storePassword "android"
+                keyAlias "platform"
+                keyPassword "android"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+    implementation files('libs/hslib-r0.0.2-release.aar')
+
+    implementation 'androidx.leanback:leanback:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.liulishuo.filedownloader:library:1.7.7'
+    implementation 'androidx.core:core-role:1.0.0'
+    implementation 'com.lzy.net:okgo:2.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation 'com.github.bumptech.glide:annotations:4.16.0'
+    implementation "com.github.bumptech.glide:okhttp3-integration:4.16.0"
+    implementation 'androidx.core:core-ktx:1.13.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+}
+
+def getTime() {
+    return new Date().format("yyyyMMdd_HHmm", TimeZone.getDefault());
+}

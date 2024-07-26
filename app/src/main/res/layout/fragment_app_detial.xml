@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wallpaper_1" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/div_content"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/fragment_app_detial_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:clipChildren="false"
+            android:clipToOutline="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/fragment_app_detial_padding_top">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/fragment_app_detial_card_width"
+                    android:layout_height="@dimen/fragment_app_detial_card_height"
+                    app:cardBackgroundColor="@color/solid_style_4"
+                    app:cardCornerRadius="@dimen/fragment_app_detial_card_radius">
+
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/fragment_app_detial_div_title_margin_left"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WhatsApp Messenger"
+                        android:textColor="@color/text_color_style_1"
+                        android:textSize="@dimen/fragment_app_detial_app_name_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fragment_app_detial_app_pk_margin_top"
+                        android:text="com.gotokeep.androidtv"
+                        android:textSize="@dimen/fragment_app_detial_app_pk_text_size" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:minWidth="@dimen/fragment_app_detial_div_size_min_width"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/text_color_style_1"
+                        android:textSize="@dimen/fragment_app_detial_div_apk_size_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/fragment_app_detial_div_apk_size_margin_top"
+                        android:text="@string/size" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:minWidth="@dimen/fragment_app_detial_div_size_min_width"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/text_color_style_1"
+                        android:textSize="@dimen/fragment_app_detial_div_apk_size_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/fragment_app_detial_div_apk_size_margin_top"
+                        android:text="@string/scores" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <FrameLayout
+                android:clipChildren="false"
+                android:clipToOutline="false"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:clipChildren="false"
+                    android:clipToOutline="false"
+                    android:clipToPadding="false"
+                    android:layout_marginLeft="@dimen/fragment_app_detial_download_btn_margin_left"
+                    android:layout_marginTop="@dimen/fragment_app_detial_download_btn_margin_top"
+                    android:layout_marginRight="@dimen/fragment_app_detial_download_btn_margin_right"
+                    android:layout_marginBottom="@dimen/fragment_app_detial_download_btn_margin_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/donwload"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/fragment_app_detial_download_btn_height"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:textColor="@color/text_color_style_1"
+                        android:textSize="@dimen/fragment_app_detial_download_btn_text_size" />
+                    <TextView
+                        android:id="@+id/opt"
+                        android:visibility="gone"
+                        android:layout_marginLeft="@dimen/fragment_app_detial_download_btn_margin_top"
+                        android:layout_width="150dp"
+                        android:layout_height="@dimen/fragment_app_detial_download_btn_height"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:textColor="@color/text_color_style_1"
+                        android:textSize="@dimen/fragment_app_detial_download_btn_text_size" />
+                </LinearLayout>
+                <com.tea.store.view.AVLoadingIndicatorView
+                    android:id="@+id/loading_intercept"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/div_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fragment_app_detial_div_progress_margin_bottom"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fragment_app_detial_div_progress_padding_left"
+                android:paddingRight="@dimen/fragment_app_detial_div_progress_padding_right"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/mes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textColor="@color/text_color_style_1"
+                    android:textSize="@dimen/fragment_app_detial_div_progress_mes_text_size" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:max="100" />
+            </LinearLayout>
+
+            <androidx.leanback.widget.HorizontalGridView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fragment_app_detial_div_progress_banner_height"
+                android:clipChildren="false"
+                android:clipToOutline="false"
+                android:clipToPadding="false"
+                android:padding="@dimen/fragment_app_detial_div_progress_banner_padding" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fragment_app_detial_div_progress_desc_margin_top"
+                android:layout_marginBottom="@dimen/fragment_app_detial_div_progress_desc_margin_bottom"
+                android:lineSpacingExtra="@dimen/fragment_app_detial_div_progress_desc_line_spac"
+                android:textColor="@color/text_color_style_1"
+                android:textSize="@dimen/fragment_app_detial_div_progress_desc_text_size" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/masked"
+        android:visibility="gone"
+        android:text="@string/no_data"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/light_item_2"
+    android:layout_margin="@dimen/holder_keyboard_root_margin"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/holder_keyboard_root_height">
+    <TextView
+        android:id="@+id/text"
+        android:textSize="@dimen/holder_keyboard_text_text_size"
+        android:padding="@dimen/holder_keyboard_text_padding"
+        android:textColor="@color/text_selector_color_1"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/holder_keyboard_icon_width"
+        android:layout_height="@dimen/holder_keyboard_icon_height"/>
+</FrameLayout>

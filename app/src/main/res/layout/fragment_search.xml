@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.tea.store.view.InterceptLinearLayout
+            android:id="@+id/div_search"
+            android:layout_width="@dimen/fragment_search_div_search_width"
+            android:layout_height="@dimen/fragment_search_div_search_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/fragment_search_div_search_margin_top"
+            android:layout_marginBottom="@dimen/fragment_search_div_search_margin_bottom"
+            android:background="@drawable/menu_item_2"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/fragment_search_icon_width"
+                android:layout_height="@dimen/fragment_search_icon_height"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/fragment_search_icon_margin_left"
+                android:padding="@dimen/fragment_search_icon_padding"
+                android:rotation="-270"
+                android:src="@drawable/baseline_search_100" />
+
+            <EditText
+
+                android:id="@+id/edit_query"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/fragment_search_edit_padding_left"
+                android:paddingRight="@dimen/fragment_search_edit_padding_right"
+                android:textColor="@color/text_color_style_1"
+                android:textSize="@dimen/fragment_search_edit_text_size" />
+        </com.tea.store.view.InterceptLinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.leanback.widget.VerticalGridView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToOutline="false"
+                android:clipToPadding="false"
+                android:paddingLeft="@dimen/fragment_search_content_padding_left"
+                android:paddingRight="@dimen/fragment_search_content_padding_right"
+                android:paddingBottom="@dimen/fragment_search_content_padding_bottom"
+                app:focusOutEnd="true"
+                app:focusOutFront="true" />
+
+            <TextView
+                android:id="@+id/none"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToOutline="false"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:text="@string/no_data"
+                android:textSize="35sp"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>

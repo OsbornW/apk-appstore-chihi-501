@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tea.store.view.MyFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/holder_item_app_root_margin"
+    android:background="@drawable/rect_solid_8dp_alpha_1"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:foreground="@drawable/bg_app"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/holder_item_app_icon_width"
+            android:layout_height="@dimen/holder_item_app_icon_height"
+            android:layout_margin="@dimen/holder_item_app_icon_margin" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="@dimen/holder_item_app_div_content_height"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/holder_item_app_div_content_padding_left"
+            android:paddingRight="@dimen/holder_item_app_div_content_padding_right">
+
+            <com.tea.store.view.MarqueeTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:textColor="@color/text_color_style_1"
+                android:textSize="@dimen/holder_item_app_title_text_size" />
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/holder_item_app_message_margin_top"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textSize="@dimen/holder_item_app_message_text_size" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</com.tea.store.view.MyFrameLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tea.store.view.MyFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/holder_slide_menu_root_height"
+    android:layout_marginLeft="@dimen/holder_slide_menu_root_margin_left"
+    android:layout_marginTop="@dimen/holder_slide_menu_root_margin_top"
+    android:layout_marginRight="@dimen/holder_slide_menu_root_margin_right"
+    android:layout_marginBottom="@dimen/holder_slide_menu_root_margin_bottom"
+    android:background="@drawable/menu_item_3"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/holder_slide_menu_icon_width"
+        android:layout_height="@dimen/holder_slide_menu_icon_height"
+        android:layout_gravity="center"
+        android:src="@drawable/baseline_home_100" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="@dimen/holder_slide_menu_title_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/holder_slide_menu_title_margin_left"
+            android:layout_marginRight="@dimen/holder_slide_menu_title_margin_right"
+            android:text="Home"
+            android:textSize="@dimen/holder_slide_menu_title_text_size"
+            android:visibility="gone" />
+    </LinearLayout>
+</com.tea.store.view.MyFrameLayout>

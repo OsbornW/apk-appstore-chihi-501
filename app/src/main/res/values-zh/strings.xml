@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">CHIHI App Store</string>
+    <string name="browse_title">Videos by Your Company</string>
+    <string name="related_movies">Related Videos</string>
+    <string name="grid_view">Grid View</string>
+    <string name="error_fragment">Error Fragment</string>
+    <string name="personal_settings">Personal Settings</string>
+    <string name="watch_trailer_1">Watch trailer</string>
+    <string name="watch_trailer_2">FREE</string>
+    <string name="rent_1">Rent By Day</string>
+    <string name="rent_2">From $1.99</string>
+    <string name="buy_1">Buy and Own</string>
+    <string name="buy_2">AT $9.99</string>
+    <string name="movie">Movie</string>
+
+    <!-- Error messages -->
+    <string name="error_fragment_message">An error occurred</string>
+    <string name="dismiss_error">Dismiss</string>
+
+    <string name="search">搜索</string>
+    <string name="donwload_progress">下载中 (%.01f%%)</string>
+    <string name="donwload_complete">下载完成</string>
+    <string name="download_fail">下载失败</string>
+    <string name="donwload">下载</string>
+    <string name="installation">安装</string>
+    <string name="please_wait">请稍等</string>
+    <string name="size">大小</string>
+    <string name="scores">评分</string>
+    <string name="next">下一页</string>
+    <string name="previous">上一页</string>
+    <string name="no_data">未找到数据</string>
+    <string name="install_success">应用程序已安装</string>
+    <string name="tip">提示</string>
+    <string name="confirm">确认</string>
+    <string name="recommend_home">首选推荐</string>
+    <string name="recommend_hot">热门推荐</string>
+    <string name="recommend_topic_lift">专题合计 (生活)</string>
+    <string name="recommend_topic_video">专题合计 (视频)</string>
+    <string name="recommend_topic_educate">专题合计 (教育)</string>
+    <string name="recommend_topic_tools">专题合计 (工具)</string>
+    <string name="recommend_games">推荐游戏</string>
+
+    <string name="waiting">等待中</string>
+    <string name="download_fail_mask">下载失败</string>
+    <string name="install_failed">安装失败</string>
+    <string name="installed">安装成功</string>
+    <string name="installing">安装中</string>
+    <string name="cancel">取消</string>
+    <string name="wether_turn_on_app">是否打开</string>
+    <string name="remove_download">移除下载</string>
+    <string name="remove_notify_apk_download">执行</string>
+    <string name="remove">移除</string>
+    <string name="retry">重试</string>
+    <string name="close">关闭</string>
+    <string name="download_success">下载成功</string>
+    <string name="install">安装</string>
+    <string name="open">打开</string>
+</resources>

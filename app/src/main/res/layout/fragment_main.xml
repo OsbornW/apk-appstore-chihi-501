@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/wallpaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wallpaper_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="@dimen/fragment_main_slide_width"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/fragment_main_slide_margin_left"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/div_menus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+                <androidx.leanback.widget.HorizontalGridView
+                    android:id="@+id/slide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:focusOutEnd="true"
+                    app:focusOutFront="true" />
+
+                <com.tea.store.view.MyFrameLayout
+                    android:id="@+id/wifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/holder_slide_menu_root_height"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginLeft="@dimen/holder_slide_menu_root_margin_left"
+                    android:layout_marginTop="@dimen/holder_slide_menu_root_margin_top"
+                    android:layout_marginRight="@dimen/holder_slide_menu_root_margin_right"
+                    android:layout_marginBottom="@dimen/holder_slide_menu_root_margin_bottom"
+                    android:background="@drawable/menu_item_3"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/icon"
+                            android:layout_width="@dimen/holder_slide_menu_icon_width"
+                            android:layout_height="@dimen/holder_slide_menu_icon_height"
+                            android:layout_gravity="center"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/baseline_wifi_100" />
+                    </LinearLayout>
+                </com.tea.store.view.MyFrameLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/child_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

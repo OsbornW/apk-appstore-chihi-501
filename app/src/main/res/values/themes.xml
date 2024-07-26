@@ -1,0 +1,14 @@
+<resources>
+
+    <style name="Theme.AppStore" parent="@style/Theme.AppCompat">
+        <item name="android:windowFullscreen">true</item>
+        <item name="colorControlActivated">@color/ico_style_1</item>
+    </style>
+    <style name="AVLoadingIndicatorView">
+        <item name="minWidth">48dip</item>
+        <item name="maxWidth">48dip</item>
+        <item name="minHeight">48dip</item>
+        <item name="maxHeight">48dip</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+</resources>

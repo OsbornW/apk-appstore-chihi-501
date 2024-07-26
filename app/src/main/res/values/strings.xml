@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">CHIHI App Store</string>
+    <string name="browse_title">Videos by Your Company</string>
+    <string name="related_movies">Related Videos</string>
+    <string name="grid_view">Grid View</string>
+    <string name="error_fragment">Error Fragment</string>
+    <string name="personal_settings">Personal Settings</string>
+    <string name="watch_trailer_1">Watch trailer</string>
+    <string name="watch_trailer_2">FREE</string>
+    <string name="rent_1">Rent By Day</string>
+    <string name="rent_2">From $1.99</string>
+    <string name="buy_1">Buy and Own</string>
+    <string name="buy_2">AT $9.99</string>
+    <string name="movie">Movie</string>
+
+    <!-- Error messages -->
+    <string name="error_fragment_message">An error occurred</string>
+    <string name="dismiss_error">Dismiss</string>
+
+    <string name="search">Search</string>
+    <string name="donwload_progress">Downloading (%.01f%%)</string>
+    <string name="donwload_complete">The download is complete</string>
+    <string name="download_fail">The download failed</string>
+    <string name="donwload">Donwload</string>
+    <string name="installation">Installation</string>
+    <string name="please_wait">Please wait</string>
+    <string name="size">Size</string>
+    <string name="scores">Scores</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="no_data">No data was found</string>
+    <string name="install_success">The app is installed</string>
+    <string name="tip">Tip</string>
+    <string name="confirm">Confirm</string>
+    <string name="recommend_home">Recommend home</string>
+    <string name="recommend_hot">Recommend Hot</string>
+    <string name="recommend_topic_lift">Recommend Topic (Life)</string>
+    <string name="recommend_topic_video">Recommend Topic (Video)</string>
+    <string name="recommend_topic_educate">Recommend Topic (Education)</string>
+    <string name="recommend_topic_tools">Recommend Topic (Tools)</string>
+    <string name="recommend_games">Recommend Games</string>
+
+    <string name="waiting">Waiting</string>
+    <string name="download_fail_mask">Download fail</string>
+    <string name="install_failed">Install failed</string>
+    <string name="installed">Installed</string>
+    <string name="installing">Installing</string>
+    <string name="cancel">Cancel</string>
+    <string name="wether_turn_on_app">turn on</string>
+    <string name="remove_download">Remove download</string>
+    <string name="remove_notify_apk_download">Action</string>
+    <string name="remove">Remove</string>
+    <string name="retry">Retry</string>
+    <string name="close">Close</string>
+    <string name="download_success">Download success</string>
+    <string name="install">Install</string>
+    <string name="open">Open</string>
+</resources>
